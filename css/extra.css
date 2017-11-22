@@ -12,8 +12,49 @@ dd {
     -moz-margin-start: 40px;
 }
 
+/* content */
+#content-wrap {
+	clear: both;
+	background: #FFF url(../images/contentbg.jpg) repeat-y center top;
+	float: left;
+	width: 100%;
+}
+#content {
+	text-align: left;
+  margin: 30px auto;
+  margin-left: 200px;
+	padding: 0;
+}
+
+/* main1 */
+#main {
+	margin: 0 20px 10px 0;
+	padding: 0;
+	width: 590px;
+	float: left;
+}
+#main h1 {
+	font: normal 2.25em Georgia, "Times New Roman", Times, serif;
+	color: #111;
+	padding: 0 0 5px 0;
+	margin: 15px 15px 20px 15px;
+	letter-spacing:-1px;
+	background: url(../images/bk_dotted.gif) repeat-x left bottom;
+}
+#main h1 a {
+	color: #111;
+	text-decoration: none;
+}
+#main p, #main h1, #main h2, #main h3, #main blockquote, #main form, #main table {
+	margin-left: 0;
+}
+#main form p {
+	margin: 15px;
+}
+
+/* main2 */
 #main2 {
-  width: 390px;
+  width: 600px;
   float: left;
 }
 
@@ -24,9 +65,20 @@ dd {
 }
 
 #sidebar { 
+  background-color:#efefef;
   width: 190px; 
   position: fixed; 
   margin-left: 10px; 
+}
+
+#duo1 {
+  float: left;
+  width: 50%;
+}
+
+#duo2 {
+  float: right;
+  width: 50%;
 }
 
 #container2{
@@ -42,4 +94,12 @@ dd {
 
 .container2.space-around {
   justify-content: space-around;
+}
+
+.clearfix::after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
 }

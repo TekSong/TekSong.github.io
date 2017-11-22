@@ -34,7 +34,7 @@ body {
 					<a href="/CV.html">CV</a>
 	</li>              
 	              <li class="">
-      					<a href="/KATUSA.html">Second to None</a>
+      					<a href="/teaching.html">TEACHING</a>
 			      	</li>   
 				  
 				  
