@@ -12,6 +12,11 @@ dd {
     -moz-margin-start: 40px;
 }
 
+#main2 {
+  width: 390px;
+  float: left;
+}
+
 #page-wrap { 
   width: 600px; 
   margin: 15px auto; 
