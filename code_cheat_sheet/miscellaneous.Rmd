@@ -31,7 +31,7 @@ body {
         
         
           <li class="">
-					<a href="/CV.html">CVk</a>
+					<a href="/cv.html">CVk</a>
 	</li>            
 	              <li class="">
       					<a href="/KATUSA.html">Second to None</a>
