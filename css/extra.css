@@ -60,7 +60,6 @@ dd {
 
 /* main2 */
 #main2 {
-  width: 600px;
   float: left;
 }
 
@@ -76,6 +75,19 @@ dd {
 	color: #111;
 	text-decoration: none;
 }
+
+#main2 h3 {
+	font: normal 1.25em Georgia, "Times New Roman", Times, serif;
+	color: #111;
+	padding: 0 0 5px 0;
+	letter-spacing:-1px;
+	background: url(../images/bk_dotted.gif) repeat-x left bottom;
+}
+#main2 h3 a {
+	color: #111;
+	text-decoration: none;
+}
+
 #main2 p, #main2 h1, #main2 h2, #main2 h3, #main2 blockquote, #main2 form, #main2 table {
 	margin-left: 0;
 }
@@ -87,6 +99,13 @@ dd {
 #page-wrap { 
 	background: #FFF url(../images/contentbg.jpg) repeat-y center top;
   width: 600px; 
+  margin: 15px auto; 
+  position: relative; 
+}
+
+#page-wrap2 { 
+	background: #FFF url(../images/contentbg.jpg) repeat-y center top;
+  width: 850px; 
   margin: 15px auto; 
   position: relative; 
 }
