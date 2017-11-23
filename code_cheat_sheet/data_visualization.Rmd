@@ -39,7 +39,7 @@ body {
 				  
 				  
 	<li class="">
-					<a href="/past_project.html">Past Project</a>
+					<a href="/research.html">RESEARCH</a>
 	</li>
 
 	<li class="">

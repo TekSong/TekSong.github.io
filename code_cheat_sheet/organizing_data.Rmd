@@ -34,12 +34,12 @@ body {
 					<a href="/cv.html">CV</a>
 	</li>   
 	              <li class="">
-      					<a href="/KATUSA.html">Second to None</a>
+      					<a href="/teaching.html">TEACHING</a>
 			      	</li>   
 				  
 				  
 	<li class="">
-					<a href="/past_project.html">Past Project</a>
+					<a href="/research.html">RESEARCH</a>
 	</li>
 
 	<li class="">
