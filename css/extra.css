@@ -88,13 +88,24 @@ dd {
 	text-decoration: none;
 }
 
+#main2 h4 {
+	font: normal 1.00em Georgia, "Times New Roman", Times, serif;
+	color: #111;
+	padding: 0 0 0 0;
+	letter-spacing: 0;
+	background: url(../images/bk_dotted.gif) repeat-x left bottom;
+}
+#main2 h4 a {
+	color: #111;
+	text-decoration: none;
+}
+
 #main2 p, #main2 h1, #main2 h2, #main2 h3, #main2 blockquote, #main2 form, #main2 table {
 	margin-left: 0;
 }
 #main2 form p {
 	margin: 15px;
 }
-
 
 #page-wrap { 
 	background: #FFF url(../images/contentbg.jpg) repeat-y center top;
@@ -128,6 +139,16 @@ dd {
   width: 50%;
 }
 
+#duo21 {
+  float: left;
+  width: 20%;
+}
+
+#duo22 {
+  float: right;
+  width: 80%;
+}
+
 #container2{
   margin-right: 15px auto;
   margin-left:auto;
@@ -150,3 +171,29 @@ dd {
   height: 0;
   visibility: hidden;
 }
+
+/* image */
+img.image-thumbnail {
+    height: 100px;
+}
+
+p img {
+  height: 1em;
+  width: auto;
+}
+
+
+/* side by side divs*/
+div.wrapper2 {
+	display: flex;
+}
+
+div.left2 {
+	flex: 0 0;
+}
+
+div.right2 {
+	flex: 0 1;
+}
+
+* { padding: 0; margin: 0; }
