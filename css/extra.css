@@ -26,6 +26,12 @@ dd {
 	padding: 0;
 }
 
+#content2 {
+	text-align: left;
+  margin: 30px auto;
+	padding: 0;
+}
+
 /* main1 */
 #main {
 	margin: 0 20px 10px 0;
@@ -34,7 +40,7 @@ dd {
 	float: left;
 }
 #main h1 {
-	font: normal 2.25em Georgia, "Times New Roman", Times, serif;
+	font: normal 1.75em Georgia, "Times New Roman", Times, serif;
 	color: #111;
 	padding: 0 0 5px 0;
 	margin: 15px 15px 20px 15px;
@@ -58,11 +64,33 @@ dd {
   float: left;
 }
 
+#main2 h2 {
+	font: normal 1.75em Georgia, "Times New Roman", Times, serif;
+	color: #111;
+	padding: 0 0 5px 0;
+	margin: 15px 15px 20px 15px;
+	letter-spacing:-1px;
+	background: url(../images/bk_dotted.gif) repeat-x left bottom;
+}
+#main2 h2 a {
+	color: #111;
+	text-decoration: none;
+}
+#main2 p, #main2 h1, #main2 h2, #main2 h3, #main2 blockquote, #main2 form, #main2 table {
+	margin-left: 0;
+}
+#main2 form p {
+	margin: 15px;
+}
+
+
 #page-wrap { 
+	background: #FFF url(../images/contentbg.jpg) repeat-y center top;
   width: 600px; 
   margin: 15px auto; 
   position: relative; 
 }
+
 
 #sidebar { 
   background-color:#efefef;
