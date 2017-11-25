@@ -39,9 +39,11 @@ body {
 				  
 				  
 	<li class="">
-					<a href="/research.html">RESEARC</a>
+					<a href="/research.html">RESEARCH</a>
 	</li>
-
+  <li class="">
+    <a href="/coursework.html">COURSEWORK</a>
+  </li>
 	<li class="">
 					<a href="/cheat_sheet.html">Cheat Sheet</a>
 	</li>
