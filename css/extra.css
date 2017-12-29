@@ -109,8 +109,9 @@ dd {
 
 #page-wrap { 
 	background: #FFF url(../images/contentbg.jpg) repeat-y center top;
-  width: 600px; 
-  margin: 15px auto; 
+  width: 750px; 
+	margin: 15px auto;
+	margin-left: 250px;
   position: relative; 
 }
 
