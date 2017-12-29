@@ -7,16 +7,16 @@ output:
     theme: cosmo
 ---
 
-<style>
+<!--<style>
 body {
     position: absolute;
     left: 0px;}
 </style>
 
 
-<!--html_preserve-->
+<!--html_preserve
 <div class="container">
-<!-- Static navbar -->
+<!-- Static navbar
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -51,11 +51,12 @@ body {
 	</li>
 
       </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container-fluid -->
-</nav><!--navbar navbar-default-->
+    </div><!--/.nav-collapse
+  </div><!--/.container-fluid 
+</nav><!--navbar navbar-default
 </div>
-<!--/html_preserve-->
+<!--/html_preserve
+-->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
