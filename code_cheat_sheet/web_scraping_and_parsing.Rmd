@@ -6,58 +6,6 @@ output:
     toc_float: true
     theme: cosmo
 ---
-
-<!--<style>
-body {
-    position: absolute;
-    left: 0px;}
-</style>
-
-
-<!--html_preserve
-<div class="container">
-<!-- Static navbar
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="../index.html">Home</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        
-        
-          <li class="">
-					<a href="/cv.html">CV</a>
-	</li>
-	              <li class="">
-      					<a href="/teaching.html">TEACHING</a>
-			      	</li>   
-				  
-				  
-	<li class="">
-					<a href="/research.html">RESEARCH</a>
-	</li>
-  <li class="">
-    <a href="/coursework.html">COURSEWORK</a>
-  </li>
-	<li class="">
-					<a href="/cheat_sheet.html">Cheat Sheet</a>
-	</li>
-
-      </ul>
-    </div><!--/.nav-collapse
-  </div><!--/.container-fluid 
-</nav><!--navbar navbar-default
-</div>
-<!--/html_preserve
--->
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(rvest)
@@ -79,7 +27,7 @@ Argument
 *url*: A url string
 
 ```{r, tidy=TRUE, comment=""}
-read_html("https://jeffsong9.github.io/")
+read_html("http://TekSong.github.io/")
 ```
 
 <h3><li>`html_nodes`</li></h3><ol type="a">
@@ -164,4 +112,7 @@ cf) html_attrs
 
 
 </ol><!--rvest package-->
+<h2><li>More to be updated</li></h2><ol type="1">
+<h3><li>How to scrape HTML with javascript embedded </li></h3>
+</ol>
 </ol><!--HTML Scraping and parsing-->
