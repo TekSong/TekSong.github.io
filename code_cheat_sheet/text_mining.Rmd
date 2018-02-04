@@ -96,3 +96,37 @@ encoding
 
 R has five main types of objects to store data: vector, factor, matrix (and array), data.frame, and list.
 character string
+
+```{r}
+clean_abb=function(string){
+  string %>%
+    gsub("\'s"," is", .) %>%
+    gsub("\'m"," am", .) %>%
+    gsub("\'ll"," will", .) %>%  
+    gsub("isn\'t","is not", .) %>% 
+    gsub("don\'t","do not", .) %>%
+    gsub("aren\'t","are not", .) %>%
+    gsub("ain\'t","are not", .) %>%
+    gsub("didn\'t","did not", .) %>%
+    gsub("shouldn\'t","should not", .) %>%
+    gsub("wouldn\'t","would not", .) %>%
+    gsub("couldn\'t","could not", .) %>>%
+    trimws() %>>%
+    return()
+}
+```
+
+```{r, echo=F, eval=F}
+    # gsub("’s"," is", .) %>%
+    # gsub("’m"," am", .) %>%
+    # gsub("’ll"," will", .) %>%  
+    # gsub("isn’t","is not", .) %>% 
+    # gsub("don’t","do not", .) %>%
+    # gsub("aren’t","are not", .) %>%
+    # gsub("ain’t","are not", .) %>%
+    # gsub("didn’t","did not", .) %>%
+    # gsub("shouldn’t","should not", .) %>%
+    # gsub("wouldn’t","would not", .) %>%
+    # gsub("couldn’t","could not", .) %>%
+```
+

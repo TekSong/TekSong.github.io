@@ -263,6 +263,22 @@ $the dollar sign\\$
 --></p>
 <p>encoding</p>
 <p>R has five main types of objects to store data: vector, factor, matrix (and array), data.frame, and list. character string</p>
+<pre class="r"><code>clean_abb=function(string){
+  string %&gt;%
+    gsub(&quot;\'s&quot;,&quot; is&quot;, .) %&gt;%
+    gsub(&quot;\'m&quot;,&quot; am&quot;, .) %&gt;%
+    gsub(&quot;\'ll&quot;,&quot; will&quot;, .) %&gt;%  
+    gsub(&quot;isn\'t&quot;,&quot;is not&quot;, .) %&gt;% 
+    gsub(&quot;don\'t&quot;,&quot;do not&quot;, .) %&gt;%
+    gsub(&quot;aren\'t&quot;,&quot;are not&quot;, .) %&gt;%
+    gsub(&quot;ain\'t&quot;,&quot;are not&quot;, .) %&gt;%
+    gsub(&quot;didn\'t&quot;,&quot;did not&quot;, .) %&gt;%
+    gsub(&quot;shouldn\'t&quot;,&quot;should not&quot;, .) %&gt;%
+    gsub(&quot;wouldn\'t&quot;,&quot;would not&quot;, .) %&gt;%
+    gsub(&quot;couldn\'t&quot;,&quot;could not&quot;, .) %&gt;&gt;%
+    trimws() %&gt;&gt;%
+    return()
+}</code></pre>
 
 
 
