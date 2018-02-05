@@ -265,17 +265,79 @@ $the dollar sign\\$
 <p>R has five main types of objects to store data: vector, factor, matrix (and array), data.frame, and list. character string</p>
 <pre class="r"><code>clean_abb=function(string){
   string %&gt;%
-    gsub(&quot;\'s&quot;,&quot; is&quot;, .) %&gt;%
-    gsub(&quot;\'m&quot;,&quot; am&quot;, .) %&gt;%
-    gsub(&quot;\'ll&quot;,&quot; will&quot;, .) %&gt;%  
-    gsub(&quot;isn\'t&quot;,&quot;is not&quot;, .) %&gt;% 
-    gsub(&quot;don\'t&quot;,&quot;do not&quot;, .) %&gt;%
-    gsub(&quot;aren\'t&quot;,&quot;are not&quot;, .) %&gt;%
-    gsub(&quot;ain\'t&quot;,&quot;are not&quot;, .) %&gt;%
-    gsub(&quot;didn\'t&quot;,&quot;did not&quot;, .) %&gt;%
-    gsub(&quot;shouldn\'t&quot;,&quot;should not&quot;, .) %&gt;%
-    gsub(&quot;wouldn\'t&quot;,&quot;would not&quot;, .) %&gt;%
-    gsub(&quot;couldn\'t&quot;,&quot;could not&quot;, .) %&gt;&gt;%
+    gsub(&quot;aren\'t&quot;, &quot;are not&quot;, .) %&gt;%
+    gsub(&quot;can\'t&quot;, &quot;cannot&quot;, .) %&gt;%
+    gsub(&quot;couldn\'t&quot;, &quot;could not&quot;, .) %&gt;%
+    gsub(&quot;didn\'t&quot;, &quot;did not&quot;, .) %&gt;%
+    gsub(&quot;doesn\'t&quot;, &quot;does not&quot;, .) %&gt;%
+    gsub(&quot;don\'t&quot;, &quot;do not&quot;, .) %&gt;%
+    gsub(&quot;hadn\'t&quot;, &quot;had not&quot;, .) %&gt;%
+    gsub(&quot;hasn\'t&quot;, &quot;has not&quot;, .) %&gt;%
+    gsub(&quot;haven\'t&quot;, &quot;have not&quot;, .) %&gt;%
+    gsub(&quot;he'd&quot;, &quot;he would&quot;, .) %&gt;% #&quot;he had&quot;
+    gsub(&quot;he'll&quot;, &quot;he will&quot;, .) %&gt;% #, &quot;he shall&quot;
+    gsub(&quot;he's&quot;, &quot;he is&quot;, .) %&gt;% #&quot;he has&quot;, 
+    gsub(&quot;i'd&quot;, &quot;i would&quot;, .) %&gt;% #&quot;I had&quot;, 
+    gsub(&quot;i'll&quot;, &quot;i will&quot;, .) %&gt;% #&quot;I shall&quot;, 
+    gsub(&quot;i'm&quot;, &quot;i am&quot;, .) %&gt;%
+    gsub(&quot;i've&quot;, &quot;i have&quot;, .) %&gt;%
+    gsub(&quot;isn\'t&quot;, &quot;is not&quot;, .) %&gt;%
+    gsub(&quot;it's&quot;, &quot;it is&quot;, .) %&gt;% #&quot;it has&quot;, 
+    gsub(&quot;let's&quot;, &quot;let us&quot;, .) %&gt;%
+    gsub(&quot;mustn\'t&quot;, &quot;must not&quot;, .) %&gt;%
+    gsub(&quot;shan\'t&quot;, &quot;shall not&quot;, .) %&gt;%
+    gsub(&quot;she'd&quot;, &quot;she would&quot;, .) %&gt;% #&quot;she had&quot;, 
+    gsub(&quot;she'll&quot;, &quot;she will&quot;, .) %&gt;% #&quot;she shall&quot;, 
+    gsub(&quot;she's&quot;, &quot;she has&quot;, .) %&gt;% #&quot;she is&quot;, 
+    gsub(&quot;shouldn\'t&quot;, &quot;should not&quot;, .) %&gt;%
+    gsub(&quot;that's&quot;, &quot;that is&quot;, .) %&gt;% #&quot;that has&quot;, 
+    gsub(&quot;there's&quot;, &quot;there is&quot;, .) %&gt;% #&quot;there has&quot;, 
+    gsub(&quot;they'd&quot;, &quot;they would&quot;, .) %&gt;% #&quot;they had&quot;, 
+    gsub(&quot;they'll&quot;, &quot;they will&quot;, .) %&gt;% #&quot;they shall&quot;, 
+    gsub(&quot;they're&quot;, &quot;they are&quot;, .) %&gt;%
+    gsub(&quot;they've&quot;, &quot;they have&quot;, .) %&gt;%
+    gsub(&quot;we'd&quot;, &quot;we would&quot;, .) %&gt;% #&quot;we had&quot;, 
+    gsub(&quot;we're&quot;, &quot;we are&quot;, .) %&gt;%
+    gsub(&quot;we've&quot;, &quot;we have&quot;, .) %&gt;%
+    gsub(&quot;weren\'t&quot;, &quot;were not&quot;, .) %&gt;%
+    gsub(&quot;what'll&quot;, &quot;what will&quot;, .) %&gt;% #&quot;what shall&quot;, 
+    gsub(&quot;what're&quot;, &quot;what are&quot;, .) %&gt;%
+    gsub(&quot;what's&quot;, &quot;what is&quot;, .) %&gt;% #&quot;what has&quot;, 
+    gsub(&quot;what've&quot;, &quot;what have&quot;, .) %&gt;%
+    gsub(&quot;where's&quot;, &quot;where is&quot;, .) %&gt;% #&quot;where has&quot;, 
+    gsub(&quot;who'd&quot;, &quot;who would&quot;, .) %&gt;% #&quot;who had&quot;, 
+    gsub(&quot;who'll&quot;, &quot;who will&quot;, .) %&gt;% #&quot;who shall&quot;, 
+    gsub(&quot;who're&quot;, &quot;who are&quot;, .) %&gt;%
+    gsub(&quot;who's&quot;, &quot;who is&quot;, .) %&gt;% #&quot;who has&quot;, 
+    gsub(&quot;who've&quot;, &quot;who have&quot;, .) %&gt;%
+    gsub(&quot;won\'t&quot;, &quot;will not&quot;, .) %&gt;%
+    gsub(&quot;wouldn\'t&quot;, &quot;would not&quot;, .) %&gt;%
+    gsub(&quot;you'd&quot;, &quot;you would&quot;, .) %&gt;% #&quot;you had&quot;, 
+    gsub(&quot;you'll&quot;, &quot;you will&quot;, .) %&gt;% #&quot;you shall&quot;, 
+    gsub(&quot;you're&quot;, &quot;you are&quot;, .) %&gt;%
+    gsub(&quot;you've&quot;, &quot;you have&quot;, .) %&gt;%
+    gsub(&quot;arent&quot;, &quot;are not&quot;, .) %&gt;%
+    gsub(&quot; cant &quot;, &quot; cannot &quot;, .) %&gt;%
+    gsub(&quot;^cant &quot;, &quot;cannot &quot;, .) %&gt;%
+    gsub(&quot; cant$&quot;, &quot; cannot&quot;, .) %&gt;%
+    gsub(&quot;couldnt&quot;, &quot;could not&quot;, .) %&gt;%
+    gsub(&quot;didnt&quot;, &quot;did not&quot;, .) %&gt;%
+    gsub(&quot;doesnt&quot;, &quot;does not&quot;, .) %&gt;%
+    gsub(&quot; dont &quot;, &quot; do not &quot;, .) %&gt;%
+    gsub(&quot;^dont &quot;, &quot;do not &quot;, .) %&gt;%
+    gsub(&quot; dont$&quot;, &quot; do not&quot;, .) %&gt;%
+    gsub(&quot;hadnt&quot;, &quot;had not&quot;, .) %&gt;%
+    gsub(&quot;hasnt&quot;, &quot;has not&quot;, .) %&gt;%
+    gsub(&quot;havent&quot;, &quot;have not&quot;, .) %&gt;%
+    gsub(&quot; isnt &quot;, &quot; is not &quot;, .) %&gt;%
+    gsub(&quot;^isnt &quot;, &quot;is not &quot;, .) %&gt;%
+    gsub(&quot; isnt$&quot;, &quot; is not&quot;, .) %&gt;%
+    gsub(&quot;mustnt&quot;, &quot;must not&quot;, .) %&gt;%
+    gsub(&quot;shouldnt&quot;, &quot;should not&quot;, .) %&gt;%
+    gsub(&quot;werent&quot;, &quot;were not&quot;, .) %&gt;%
+    gsub(&quot; wont &quot;, &quot; will not &quot;, .) %&gt;%
+    gsub(&quot;^wont &quot;, &quot;will not &quot;, .) %&gt;%
+    gsub(&quot; wont$&quot;, &quot; will not&quot;, .) %&gt;&gt;%
     trimws() %&gt;&gt;%
     return()
 }</code></pre>
