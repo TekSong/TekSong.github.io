@@ -1,0 +1,43 @@
+img.resize_120 {
+  max-width:120%;
+  max-height:120%;
+}
+
+img.resize_100 {
+  max-width:100%;
+  max-height:100%;
+}
+
+img.resize_90 {
+  max-width:90%;
+  max-height:90%;
+}
+
+img.resize_80 {
+  max-width:80%;
+  max-height:80%;
+}
+
+p.small {
+  line-height: 0.7;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}

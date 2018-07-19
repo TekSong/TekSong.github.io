@@ -1,0 +1,32 @@
+import pip
+from pip._internal import main
+main(['install', 'selenium'])
+main(['install', 'bs4'])
+main(['install', 'pandas'])
+main(['install', 'lxml'])
+
+from selenium import webdriver
+path_to_chromedriver = 'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'
+path_to_firefoxdriver='C:\Program Files\Mozilla Firefox\firefox.exe'
+
+browser = webdriver.Chrome(executable_path = path_to_chromedriver)
+browser = webdriver.Firefox(executable_path = path_to_firefoxdriver)
+
+browser.find_element_by_css_selector
+browser.find_element_by_xpath
+browser.find_element_by_id
+browser.find_element_by_tag_name
+browser.find_element_by_link_text
+
+browser.implicitly_wait(2)
+
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from bs4 import BeautifulSoup
+import re
+import pandas as pd
+import os
+
+outfile = open("file_path", "w")
+print (outfile, "\n".join(str(i) for i in [driver.page_source]))
+outfile.close()
