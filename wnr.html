@@ -174,9 +174,9 @@ Web Scraping is data scraping used for extracting data from websites.
 </article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> Tree Structure of HTML - DOM</h3></hgroup><article  id="web-scraping-tree-structure-of-html---dom" class="smaller columns-2">
 
 <div align="left">
-<p><img class="resize_90", src="img/DOM.png"></p></div>
+<p><img class="resize_90", src="images/DOM.png"></p></div>
 
-<pre class = 'prettyprint lang-html'>&lt;!DOCTYPE html&gt;
+<pre class = 'prettyprint lang-r'>&lt;!DOCTYPE html&gt;
 &lt;HTML&gt;
     &lt;HEAD&gt;
         &lt;TITLE&gt;My Title&lt;/TITLE&gt; 
@@ -193,7 +193,7 @@ Web Scraping is data scraping used for extracting data from websites.
 </div>
 
 <div align="center">
-<p><img class="resize_80", src="img/tree_gif.gif"> <img class="resize_80", src="img/tree_example.png"></p></div>
+<p><img class="resize_80", src="images/tree_gif.gif"> <img class="resize_80", src="images/tree_example.png"></p></div>
 
 </article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> HTML Element</h3></hgroup><article  id="web-scraping-html-element">
 
@@ -201,16 +201,16 @@ Web Scraping is data scraping used for extracting data from websites.
 </div>
 
 <div align="center">
-<img class="resize_80", src="img/html_element.png"> <br> <br>
+<img class="resize_80", src="images/html_element.png"> <br> <br>
 
 <div align="left">
-<p><a href='https://www.w3schools.com/tags/tag_comment.asp' title=''>List of Common HTML Tags</a> <img class="resize_90", src="img/tags.png"></p></div></div>
+<p><a href='https://www.w3schools.com/tags/tag_comment.asp' title=''>List of Common HTML Tags</a> <img class="resize_90", src="images/tags.png"></p></div></div>
 
 </article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> Path selector</h3></hgroup><article  id="web-scraping-path-selector" class="smaller">
 
 <div class="row">
 <div align="left" class="column">
-<p><img class="resize_100", src="img/path_eg.png"></p></div>
+<p><img class="resize_100", src="images/path_eg.png"></p></div>
 
 <div align="left" class="column">
 <ul>
@@ -271,7 +271,7 @@ Browser -&gt; Insepct Element
 
 <div class="row">
 <div align="left" class="column">
-<p><img class="resize_90", src="img/html_element.png"></p></div>
+<p><img class="resize_90", src="images/html_element.png"></p></div>
 
 <div align="left" class="column">
 <p>Tag as an <code>xpath</code> syntax <br> <br> <code>//p [@class=&quot;foo&quot;]</code></p></div></div>
@@ -280,7 +280,7 @@ Browser -&gt; Insepct Element
 
 <div class="row">
 <div align="left" class="column">
-<pre class = 'prettyprint lang-html'>&lt;!DOCTYPE html&gt;
+<pre class = 'prettyprint lang-r'>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;body&gt;
 &lt;h2&gt;Another Example&lt;/h2&gt;
@@ -334,7 +334,7 @@ Browser -&gt; Insepct Element
 
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> <code>rvest</code></h3></hgroup><article  id="web-scraping-rvest" class="smaller">
+</article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> <code class="smaller">rvest</code></h3></hgroup><article  id="web-scraping-rvest">
 
 <div style="margin-top:-30px;">
 </div>
@@ -470,29 +470,28 @@ Combine the steps
 </article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> Warm-Up Example</h3></hgroup><article  id="web-scraping-warm-up-example" class="smaller">
 
 <div style="margin-top:-30px;">
-Goal: Scrape the following from <a href='http://stat.yonsei.ac.kr/stat/intro/greetings.do' title=''>학과소개</a><br>
+
+Goal: Scrape the following from <a href='http://stat.yonsei.ac.kr/stat/intro/greetings.do' title=''>change</a><br>
 
 <ul>
 
 <li>
 
-응용통계학이란
-
 </li>
 
 <li>
 
-위 내용은 김모씨의 일상을 담은 이야기의 일부입니다 &#8230;
+/li&gt;
 
-</li>
+</ul>
 
-</ul></div>
+</div>
 
 <br>
 
 <div class="row">
 <div align="left" class="column">
-<p><img class="resize_80", src="img/about_us.png"></p></div>
+<p><img class="resize_80", src="images/about_us.png"></p></div>
 
 <div align="left" class="column">
 Things to consider <br> <br>
@@ -550,7 +549,7 @@ temp[1] %&gt;% html_text()</pre>
 
 <div class="row" style="margin-top:-30px;">
 <div align="left" class="column">
-<p><a href="http://stat.yonsei.ac.kr/stat/faculty/f_current.do"> <img class="resize_80", src="img/prof_bio.png"> </a></p></div>
+<p><a href="http://stat.yonsei.ac.kr/stat/faculty/f_current.do"> <img class="resize_80", src="images/prof_bio.png"> </a></p></div>
 
 <div align="left" class="column">
 Scrape the following information of each professor: <br>
@@ -687,8 +686,8 @@ temp</pre>
 lapply(sub_path, function(x) html_nodes(temp, xpath=x)%&gt;% html_text()) %&gt;%
   as.data.frame(stringsAsFactors=F)</pre>
 
-<div id="htmlwidget-a664fe1b86da168e3603" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a664fe1b86da168e3603">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["강상욱\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","강승호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김철응\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현중\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현태\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박상언\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박태영(학과장)\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","이학배\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","임종호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","전용호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                "],["생존분석","의학통계학","베이즈통계, 통계전산","머신러닝, 데이터사이언스,  데이터마이닝, 다변량분석","보험통계","비모수통계","베이지안 통계, 통계전산, 결측자료 분석","차원축소","Missing data analysis, Text data analysis","Data mining, Machine learning, Nonparametric smoothing"],["kanggi1@yonsei.ac.kr","seungho@yonsei.ac.kr","cekim@yonsei.ac.kr","hkim@yonsei.ac.kr","jhtkim@yonsei.ac.kr","sangun@yonsei.ac.kr","tpark@yonsei.ac.kr","hblee@yonsei.ac.kr","ijh38@yonsei.ac.kr","yhjeon@yonsei.ac.kr"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>research<\/th>\n      <th>email<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-373d49f9de3c2ab47f24" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-373d49f9de3c2ab47f24">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["강상욱\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","강승호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김철응\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현중\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현태\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박상언\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박태영(학과장)\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","이학배\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","임종호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","전용호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                "],["생존분석","의학통계학","베이즈통계, 통계전산","머신러닝, 데이터사이언스,  데이터마이닝, 다변량분석","보험통계","비모수통계","베이지안 통계, 통계전산, 결측자료 분석","차원축소","Missing data analysis, Text data analysis","Data mining, Machine learning, Nonparametric smoothing"],["kanggi1@yonsei.ac.kr","seungho@yonsei.ac.kr","cekim@yonsei.ac.kr","hkim@yonsei.ac.kr","jhtkim@yonsei.ac.kr","sangun@yonsei.ac.kr","tpark@yonsei.ac.kr","hblee@yonsei.ac.kr","ijh38@yonsei.ac.kr","yhjeon@yonsei.ac.kr"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>research<\/th>\n      <th>email<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 </article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> Advanced Example - Step 3</h3></hgroup><article  id="web-scraping-advanced-example---step-3" class="smaller">
 
@@ -704,8 +703,8 @@ html_nodes(temp, xpath=link) %&gt;%
 [2] &quot;/faculty/name_search.do?mode=view&amp;userId=zpRjQSS4v6u3Mu6yl5tNdA%3D%3D&quot;  
 [3] &quot;/faculty/name_search.do?mode=view&amp;userId=D3AHZG9rju4snWqlr%2Fn9XA%3D%3D&quot;</pre>
 
-<div id="htmlwidget-b148ebec0de24cf132b1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b148ebec0de24cf132b1">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["강상욱\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","강승호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김철응\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현중\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현태\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박상언\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박태영(학과장)\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","이학배\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","임종호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","전용호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                "],["생존분석","의학통계학","베이즈통계, 통계전산","머신러닝, 데이터사이언스,  데이터마이닝, 다변량분석","보험통계","비모수통계","베이지안 통계, 통계전산, 결측자료 분석","차원축소","Missing data analysis, Text data analysis","Data mining, Machine learning, Nonparametric smoothing"],["kanggi1@yonsei.ac.kr","seungho@yonsei.ac.kr","cekim@yonsei.ac.kr","hkim@yonsei.ac.kr","jhtkim@yonsei.ac.kr","sangun@yonsei.ac.kr","tpark@yonsei.ac.kr","hblee@yonsei.ac.kr","ijh38@yonsei.ac.kr","yhjeon@yonsei.ac.kr"],["/faculty/name_search.do?mode=view&amp;userId=JsYvKdcr%2FJrMDNa5eDHjsg%3D%3D","/faculty/name_search.do?mode=view&amp;userId=zpRjQSS4v6u3Mu6yl5tNdA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=D3AHZG9rju4snWqlr%2Fn9XA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=oyQirNoRWaB1Xp7HBdXnGA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=ABOZvokX4W4mrBTo4hBm8w%3D%3D","/faculty/name_search.do?mode=view&amp;userId=CmRXJlwS0DJ2cQUfMSCViw%3D%3D","/faculty/name_search.do?mode=view&amp;userId=X9fXTLgH2%2B50Irw7PCx5dA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=zKJnFiur7M2z%2FL5TjZHlDA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=EtWOS%2F%2BArA1ACjs%2B019Rew%3D%3D","/faculty/name_search.do?mode=view&amp;userId=zLn7yUITMUoRCLHT7RciHQ%3D%3D"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>research<\/th>\n      <th>email<\/th>\n      <th>link<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d8876d50c68e0782f9fd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d8876d50c68e0782f9fd">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10"],["강상욱\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","강승호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김철응\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현중\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","김현태\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박상언\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","박태영(학과장)\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","이학배\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","임종호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                ","전용호\n                \n                \n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\n                \n                "],["생존분석","의학통계학","베이즈통계, 통계전산","머신러닝, 데이터사이언스,  데이터마이닝, 다변량분석","보험통계","비모수통계","베이지안 통계, 통계전산, 결측자료 분석","차원축소","Missing data analysis, Text data analysis","Data mining, Machine learning, Nonparametric smoothing"],["kanggi1@yonsei.ac.kr","seungho@yonsei.ac.kr","cekim@yonsei.ac.kr","hkim@yonsei.ac.kr","jhtkim@yonsei.ac.kr","sangun@yonsei.ac.kr","tpark@yonsei.ac.kr","hblee@yonsei.ac.kr","ijh38@yonsei.ac.kr","yhjeon@yonsei.ac.kr"],["/faculty/name_search.do?mode=view&amp;userId=JsYvKdcr%2FJrMDNa5eDHjsg%3D%3D","/faculty/name_search.do?mode=view&amp;userId=zpRjQSS4v6u3Mu6yl5tNdA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=D3AHZG9rju4snWqlr%2Fn9XA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=oyQirNoRWaB1Xp7HBdXnGA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=ABOZvokX4W4mrBTo4hBm8w%3D%3D","/faculty/name_search.do?mode=view&amp;userId=CmRXJlwS0DJ2cQUfMSCViw%3D%3D","/faculty/name_search.do?mode=view&amp;userId=X9fXTLgH2%2B50Irw7PCx5dA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=zKJnFiur7M2z%2FL5TjZHlDA%3D%3D","/faculty/name_search.do?mode=view&amp;userId=EtWOS%2F%2BArA1ACjs%2B019Rew%3D%3D","/faculty/name_search.do?mode=view&amp;userId=zLn7yUITMUoRCLHT7RciHQ%3D%3D"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>name<\/th>\n      <th>research<\/th>\n      <th>email<\/th>\n      <th>link<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
 
 </article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> Scraping JavaScript</h3></hgroup><article  id="web-scraping-scraping-javascript">
 
@@ -753,7 +752,7 @@ Save the following script with <code>.js</code> extension
 
 <p>e.g. <code>p_browser.js</code></p>
 
-<pre class = 'prettyprint lang-json'>var url =&#39;URL GOES HERE&#39;;
+<pre class = 'prettyprint lang-r'>var url =&#39;URL GOES HERE&#39;;
 var page = new WebPage()
 var fs = require(&#39;fs&#39;);
 
@@ -766,8 +765,7 @@ function just_wait() {
                fs.write(&#39;new.html&#39;, page.content, &#39;w&#39;);
             phantom.exit();
     }, 2500);
-}
-</pre>
+}</pre>
 
 <li>
 
@@ -817,11 +815,6 @@ Use <code>rvest</code> to parse html
 1 Biggest Loser (%) Smallest Loser (%) Avg Lost Avg % Lost
 2    chiragchirag78        nailsvideos     &lt;NA&gt;       &lt;NA&gt;</pre>
 
-<pre >    X1       X2                  X3              X4             X5
-1 Rank Username Followers Yesterday Followers Today Followers Lost
-            X6
-1 Percent Lost</pre>
-
 </article></slide><slide class=""><hgroup><h2>Web Scraping </h2><h3> Headless browser Example (Cont.)</h3></hgroup><article  id="web-scraping-headless-browser-example-cont." class="smaller">
 
 <div class="row" style="margin-top:-50px;">
@@ -839,8 +832,8 @@ system(&quot;phantomjs p_browser.js&quot;)
   read_html() %&gt;%
   html_table(fill=T)</pre>
 
-<div id="htmlwidget-68ce02cf57a92d84a5cb" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-68ce02cf57a92d84a5cb">{"x":{"filter":"none","data":[["2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101"],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100],["instagram","justinbieber","kimkardashian","beyonce","arianagrande","selenagomez","kendalljenner","taylorswift","khloekardashian","kyliejenner","badgalriri","mileycyrus","neymarjr","kourtneykardash","nickiminaj","katyperry","cristiano","kevinhart4real","harrystyles","natgeo","ddlovato","nike","caradelevingne","niallhoran","leomessi","9gag","kingjames","jlo","theellenshow","onedirection","nashgrier","champagnepapi","chrisbrownofficial","justintimberlake","letthelordbewithyou","therock","vanessahudgens","thenewclassic","danbilzerian","jamesrodriguez10","kinggoldchains","austinmahone","itsashbenzo","camerondallas","shakira","brumarquezine","davidluiz_4","forever21","lucyhale","realmadrid","camposwell","mirandakerr","fcbarcelona","snookinic","jenselter","shaym","krisjenner","ladygaga","mistercap","zendaya","nailsartvidss","hm","iamdiddy","channingtatum","ciara","floydmayweather","angelcandices","bethanynoelm","bestvines","akon","jessicaalba","nba","pharrell","anselelgort","snoopdogg","easymoneysniper","garethbale11","louist91","iansomerhalder","elliegoulding","ninadobrev","zacefron","nature","britneyspears","laurenconrad","adrianalima","ritaora","50cent","bellathorne","fakeliampayne","sarcasm_only","gopro","barackobama","adidasoriginals","brunomars","sleepinthegardn","chiragchirag78","louisvuitton","zozeebo","nailsvideos"],["64131228","23817614","23519002","22207790","21748827","19572601","17048332","16540314","15929263","15651311","14454434","14143315","13272600","13119514","12439081","11108224","10263581","10224161","10195045","9980528","9551616","9006215","8940680","8714813","8523502","8503713","8063441","8041983","7739483","7577598","7403333","7186336","6826089","6560785","6348384","6260064","6124723","6054780","5897718","5784232","5691934","5655532","5621641","5614937","5591652","5585337","5578437","5576562","5561316","5521290","5509954","5504063","5462049","5191164","5096193","5040478","5041485","5007485","4903134","4873068","4787590","4673188","4668132","4654828","4650235","4627329","4584613","4524505","4516400","4375631","4358359","4343680","4304162","4269290","4191449","4138353","4101657","4031168","4026425","4007960","3935148","3920179","3917903","3909426","3888622","3876151","3876393","3859504","3850191","3822596","3794553","3737936","3722082","3698841","3692756","3691728","3660468","3660373","3653799","3627215"],["45251017","20279386","22218039","21375819","20219621","18456569","16141435","15814935","15180994","14824782","13294570","13431417","12974188","12499231","11953782","10817654","9965591","9630725","9375270","9751562","9122803","8749666","8563676","7966110","8319316","8383902","7610130","7908825","7469834","7047506","6857631","6618951","6304308","6318045","6118183","6037093","5874699","5803844","5799807","5730013","3564711","5164490","5295690","5326102","5450413","5457218","5479885","5331352","5250756","5362564","2225650","5268189","5329388","4813048","4914098","4770239","4825316","4639561","4570811","4492101","4717885","4545442","3618449","4308597","4353990","4336010","4408116","4172836","4322234","1916385","4154344","4148149","4138225","4161545","3937390","3902113","4035611","3640868","3898565","3833754","3799668","3772762","3830410","3744529","3722955","3739163","3670813","3653666","3347584","3734258","3685843","3644067","3509032","3597474","2811373","3518315","8","3553633","3473304","3603999"],["18880211","3538228","1300963","831971","1529206","1116032","906897","725379","748269","826529","1159864","711898","298412","620283","485299","290570","297990","593436","819775","228966","428813","256549","377004","748703","204186","119811","453311","133158","269649","530092","545702","567385","521781","242740","230201","222971","250024","250936","97911","54219","2127223","491042","325951","288835","141239","128119","98552","245210","310560","158726","3284304","235874","132661","378116","182095","270239","216169","367924","332323","380967","69705","127746","1049683","346231","296245","291319","176497","351669","194166","2459246","204015","195531","165937","107745","254059","236240","66046","390300","127860","174206","135480","147417","87493","164897","165667","136988","205580","205838","502607","88338","108710","93869","213050","101367","881383","173413","3660460","106740","180495","23216"],["29.4400%","14.8555%","5.5315%","3.7463%","7.0312%","5.7020%","5.3196%","4.3855%","4.6974%","5.2809%","8.0243%","5.0335%","2.2483%","4.7279%","3.9014%","2.6158%","2.9034%","5.8043%","8.0409%","2.2941%","4.4894%","2.8486%","4.2167%","8.5912%","2.3956%","1.4089%","5.6218%","1.6558%","3.4841%","6.9955%","7.3710%","7.8953%","7.6439%","3.6999%","3.6261%","3.5618%","4.0822%","4.1444%","1.6602%","0.9374%","37.3726%","8.6825%","5.7981%","5.1440%","2.5259%","2.2938%","1.7667%","4.3972%","5.5843%","2.8748%","59.6067%","4.2855%","2.4288%","7.2838%","3.5732%","5.3614%","4.2878%","7.3475%","6.7778%","7.8178%","1.4560%","2.7336%","22.4861%","7.4381%","6.3705%","6.2956%","3.8498%","7.7725%","4.2991%","56.2032%","4.6810%","4.5015%","3.8553%","2.5237%","6.0614%","5.7086%","1.6102%","9.6821%","3.1755%","4.3465%","3.4428%","3.7605%","2.2332%","4.2179%","4.2603%","3.5341%","5.3034%","5.3333%","13.0541%","2.3109%","2.8649%","2.5113%","5.7239%","2.7405%","23.8679%","4.6973%","99.9998%","2.9161%","4.9399%","0.6401%"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Rank<\/th>\n      <th>Username<\/th>\n      <th>Followers Yesterday<\/th>\n      <th>Followers Today<\/th>\n      <th>Followers Lost<\/th>\n      <th>Percent Lost<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-94034695e44a5f2603cd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-94034695e44a5f2603cd">{"x":{"filter":"none","data":[["2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101"],[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100],["instagram","justinbieber","kimkardashian","beyonce","arianagrande","selenagomez","kendalljenner","taylorswift","khloekardashian","kyliejenner","badgalriri","mileycyrus","neymarjr","kourtneykardash","nickiminaj","katyperry","cristiano","kevinhart4real","harrystyles","natgeo","ddlovato","nike","caradelevingne","niallhoran","leomessi","9gag","kingjames","jlo","theellenshow","onedirection","nashgrier","champagnepapi","chrisbrownofficial","justintimberlake","letthelordbewithyou","therock","vanessahudgens","thenewclassic","danbilzerian","jamesrodriguez10","kinggoldchains","austinmahone","itsashbenzo","camerondallas","shakira","brumarquezine","davidluiz_4","forever21","lucyhale","realmadrid","camposwell","mirandakerr","fcbarcelona","snookinic","jenselter","shaym","krisjenner","ladygaga","mistercap","zendaya","nailsartvidss","hm","iamdiddy","channingtatum","ciara","floydmayweather","angelcandices","bethanynoelm","bestvines","akon","jessicaalba","nba","pharrell","anselelgort","snoopdogg","easymoneysniper","garethbale11","louist91","iansomerhalder","elliegoulding","ninadobrev","zacefron","nature","britneyspears","laurenconrad","adrianalima","ritaora","50cent","bellathorne","fakeliampayne","sarcasm_only","gopro","barackobama","adidasoriginals","brunomars","sleepinthegardn","chiragchirag78","louisvuitton","zozeebo","nailsvideos"],["64131228","23817614","23519002","22207790","21748827","19572601","17048332","16540314","15929263","15651311","14454434","14143315","13272600","13119514","12439081","11108224","10263581","10224161","10195045","9980528","9551616","9006215","8940680","8714813","8523502","8503713","8063441","8041983","7739483","7577598","7403333","7186336","6826089","6560785","6348384","6260064","6124723","6054780","5897718","5784232","5691934","5655532","5621641","5614937","5591652","5585337","5578437","5576562","5561316","5521290","5509954","5504063","5462049","5191164","5096193","5040478","5041485","5007485","4903134","4873068","4787590","4673188","4668132","4654828","4650235","4627329","4584613","4524505","4516400","4375631","4358359","4343680","4304162","4269290","4191449","4138353","4101657","4031168","4026425","4007960","3935148","3920179","3917903","3909426","3888622","3876151","3876393","3859504","3850191","3822596","3794553","3737936","3722082","3698841","3692756","3691728","3660468","3660373","3653799","3627215"],["45251017","20279386","22218039","21375819","20219621","18456569","16141435","15814935","15180994","14824782","13294570","13431417","12974188","12499231","11953782","10817654","9965591","9630725","9375270","9751562","9122803","8749666","8563676","7966110","8319316","8383902","7610130","7908825","7469834","7047506","6857631","6618951","6304308","6318045","6118183","6037093","5874699","5803844","5799807","5730013","3564711","5164490","5295690","5326102","5450413","5457218","5479885","5331352","5250756","5362564","2225650","5268189","5329388","4813048","4914098","4770239","4825316","4639561","4570811","4492101","4717885","4545442","3618449","4308597","4353990","4336010","4408116","4172836","4322234","1916385","4154344","4148149","4138225","4161545","3937390","3902113","4035611","3640868","3898565","3833754","3799668","3772762","3830410","3744529","3722955","3739163","3670813","3653666","3347584","3734258","3685843","3644067","3509032","3597474","2811373","3518315","8","3553633","3473304","3603999"],["18880211","3538228","1300963","831971","1529206","1116032","906897","725379","748269","826529","1159864","711898","298412","620283","485299","290570","297990","593436","819775","228966","428813","256549","377004","748703","204186","119811","453311","133158","269649","530092","545702","567385","521781","242740","230201","222971","250024","250936","97911","54219","2127223","491042","325951","288835","141239","128119","98552","245210","310560","158726","3284304","235874","132661","378116","182095","270239","216169","367924","332323","380967","69705","127746","1049683","346231","296245","291319","176497","351669","194166","2459246","204015","195531","165937","107745","254059","236240","66046","390300","127860","174206","135480","147417","87493","164897","165667","136988","205580","205838","502607","88338","108710","93869","213050","101367","881383","173413","3660460","106740","180495","23216"],["29.4400%","14.8555%","5.5315%","3.7463%","7.0312%","5.7020%","5.3196%","4.3855%","4.6974%","5.2809%","8.0243%","5.0335%","2.2483%","4.7279%","3.9014%","2.6158%","2.9034%","5.8043%","8.0409%","2.2941%","4.4894%","2.8486%","4.2167%","8.5912%","2.3956%","1.4089%","5.6218%","1.6558%","3.4841%","6.9955%","7.3710%","7.8953%","7.6439%","3.6999%","3.6261%","3.5618%","4.0822%","4.1444%","1.6602%","0.9374%","37.3726%","8.6825%","5.7981%","5.1440%","2.5259%","2.2938%","1.7667%","4.3972%","5.5843%","2.8748%","59.6067%","4.2855%","2.4288%","7.2838%","3.5732%","5.3614%","4.2878%","7.3475%","6.7778%","7.8178%","1.4560%","2.7336%","22.4861%","7.4381%","6.3705%","6.2956%","3.8498%","7.7725%","4.2991%","56.2032%","4.6810%","4.5015%","3.8553%","2.5237%","6.0614%","5.7086%","1.6102%","9.6821%","3.1755%","4.3465%","3.4428%","3.7605%","2.2332%","4.2179%","4.2603%","3.5341%","5.3034%","5.3333%","13.0541%","2.3109%","2.8649%","2.5113%","5.7239%","2.7405%","23.8679%","4.6973%","99.9998%","2.9161%","4.9399%","0.6401%"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Rank<\/th>\n      <th>Username<\/th>\n      <th>Followers Yesterday<\/th>\n      <th>Followers Today<\/th>\n      <th>Followers Lost<\/th>\n      <th>Percent Lost<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":1},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
 <p>Download image files?</p>
 
@@ -1016,13 +1009,8 @@ the process of marking up a word in a text (corpus) as corresponding to a partic
 
 <pre class = 'prettyprint lang-r'>strsplit(string, pattern, perl=T)</pre>
 
-<pre class = 'prettyprint lang-r'>&quot;I’m so sorry but I love you 다 거짓말&quot; # feat. 빅뱅</pre>
-
-<pre >[1] &quot;I’m so sorry but I love you 다 거짓말&quot;</pre>
-
-<pre class = 'prettyprint lang-r'>strsplit(&quot;I’m so sorry but I love you 다 거짓말&quot;, &quot;but|(?&lt;=.)(?=다)&quot;, perl=T)[[1]]</pre>
-
-<pre >[1] &quot;I’m so sorry &quot; &quot; I love you &quot;   &quot;다 거짓말&quot;     </pre>
+<pre class = 'prettyprint lang-r'>&quot;Im so sorry but I love you ?? ??????&quot; # feat. ????
+strsplit(&quot;I??m so sorry but I love you ?? ??????&quot;, &quot;but|(?&lt;=.)(?=??)&quot;, perl=T)[[1]]</pre>
 
 </article></slide><slide class=""><hgroup><h2>NLP </h2><h3> Algorithm &#8211; <code>DiSSBUS</code></h3></hgroup><article  id="nlp-algorithm----dissbus">
 
